@@ -3,7 +3,7 @@
 ## Objectif
 Développer quatre scripts Bash pour enregistrer les connexions des utilisateurs et produire des statistiques journalières et mensuelles.
 
-## Scripts inclus
+## Scripts
 
 1. **log_connexion.sh**  
    - Description : ajoute une ligne dans `connexion.log` à chaque exécution.  
