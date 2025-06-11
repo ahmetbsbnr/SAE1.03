@@ -1,16 +1,74 @@
-# SAE 1.03 – Introduction au Système d’Exploitation
-## IUT de Metz – Année 2024-2025
-### Binôme : Prénom NOM & Prénom NOM – Groupe R1.04
+# SAE103 – Introduction au Système d’Exploitation
 
-## 📌 Objectif
+## Objectif
+Développer quatre scripts Bash pour enregistrer les connexions des utilisateurs et produire des statistiques journalières et mensuelles.
 
-Ce projet consiste à créer des scripts Bash permettant de :
-- Enregistrer les connexions des utilisateurs dans un fichier `connexion.log`
-- Générer des statistiques à partir de ce fichier selon différents critères (jour, mois, utilisateur)
+## Scripts inclus
 
-## 🗂️ Scripts
+1. **log_connexion.sh**  
+   - Description : ajoute une ligne dans `connexion.log` à chaque exécution.  
+   - Format : `IP;utilisateur;machine;YYYY-MM-DD_HH:MM:SS`  
+   - Usage :
+     ```bash
+     ./log_connexion.sh
+     ```
 
-### 1. `ajout_connexion.sh`
-Ajoute une ligne dans `connexion.log` à chaque exécution.
+2. **stats_journalieres.sh**  
+   - Description : affiche pour un utilisateur et un jour donné :
+     - Total de connexions et détail par heure
+     - Nombre et liste des machines utilisées
+     - Nombre et liste des adresses IP utilisées
+   - Usage :
+     ```bash
+     ./stats_journalieres.sh <utilisateur> <YYYY-MM-DD> [fichier_sortie]
+     ```
 
-**Format de la ligne :**
+3. **stats_mensuelles_user.sh**  
+   - Description : affiche pour un utilisateur et un mois donné :
+     1. Total des connexions
+     2. Connexions par jour
+     3. Machines différentes (liste + total)
+     4. IP différentes (liste + total)
+   - Mode : écran (`0`) ou fichier (`1`).  
+   - Usage :
+     ```bash
+     ./stats_mensuelles_user.sh <utilisateur> <MM> <0|1>
+     ```
+
+4. **stats_mensuelles_all.sh**  
+   - Description : mêmes statistiques que ci‑dessus pour **tous** les utilisateurs.  
+   - Mode : écran (`0`) ou fichier (`1`).  
+   - Usage :
+     ```bash
+     ./stats_mensuelles_all.sh <MM> <0|1>
+     ```
+
+## Prérequis
+- Système GNU/Linux avec Bash
+- Commandes : `date`, `grep`, `awk`, `cut`, `mkdir`, `test`
+
+## Installation
+1. Cloner le dépôt :
+   ```bash
+   git clone https://.../sae103.git
+   cd sae103
+   
+2. Rendre exécutables les scripts :
+
+   ```bash
+   chmod +x *.sh
+   ```
+
+## Dépôt et soutenance
+
+* **Date limite** : déposer uniquement les scripts `.sh` sur Arche avant **06/01/2025 08:00**.
+* **Soutenance** : préparer des fichiers `connexion.log` de test (plusieurs utilisateurs, jours, mois).
+
+## Auteurs
+
+* Binôme : Alice DURAND, Bob MARTIN
+* IUT de Metz – Année 2024-2025
+
+---
+
+*Ce README reste simple et couvre l’essentiel. À adapter selon vos besoins.*
