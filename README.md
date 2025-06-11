@@ -59,16 +59,9 @@ Développer quatre scripts Bash pour enregistrer les connexions des utilisateurs
    chmod +x *.sh
    ```
 
-## Dépôt et soutenance
-
-* **Date limite** : déposer uniquement les scripts `.sh` sur Arche avant **06/01/2025 08:00**.
-* **Soutenance** : préparer des fichiers `connexion.log` de test (plusieurs utilisateurs, jours, mois).
-
 ## Auteurs
 
-* Binôme : Alice DURAND, Bob MARTIN
+* BASBUNAR Ahmet
 * IUT de Metz – Année 2024-2025
 
 ---
-
-*Ce README reste simple et couvre l’essentiel. À adapter selon vos besoins.*
